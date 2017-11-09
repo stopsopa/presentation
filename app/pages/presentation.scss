@@ -1,0 +1,41 @@
+#target {
+    label {
+        color: white;
+    }
+    * {
+        font-family: 'Source Sans Pro';
+    }
+    a {
+        color: white;
+    }
+    ul {
+        padding: 0;
+        list-style: none;
+        li::before {
+            content: "• ";
+            color: white;
+            padding-right: 9px;
+        }
+    }
+    padding: 20px;
+    input {
+        width: 50%;
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+    textarea {
+        padding: 5px 10px;
+        width: 50%;
+    }
+    button {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+    .help {
+        padding-top: 10px;
+        color: white;
+        a {
+            color: #6767ef;
+        }
+    }
+}
