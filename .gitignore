@@ -2,3 +2,4 @@
 node_modules
 /docs/asset/
 /docs/dist/
+!/docs/dist/presentation.*

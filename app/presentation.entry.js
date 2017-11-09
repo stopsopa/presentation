@@ -18,11 +18,14 @@ Reveal.initialize({
     // default/cube/page/concave/zoom/linear/fade/none
     // transition: 'none',
     dependencies: [
-        { src: '../asset/public/node-reveal/reveal.js/plugin/markdown/marked.js' },
-        { src: '../asset/public/node-reveal/reveal.js/plugin/markdown/markdown.js' },
+        // { src: '../asset/public/node-reveal/reveal.js/plugin/markdown/marked.js' },
+        // { src: '../asset/public/node-reveal/reveal.js/plugin/markdown/markdown.js' },
+        { src: '../nm/marked.js' },
+        { src: '../nm/markdown.js' },
         // { src: '../asset/public/node-reveal/reveal.js/plugin/notes/notes.js', async: true },
         {
-            src: '../asset/public/node-reveal/reveal.js/plugin/highlight/highlight.js',
+            // src: '../asset/public/node-reveal/reveal.js/plugin/highlight/highlight.js',
+            src: '../nm/highlight.js',
             async: true,
             callback: function() {
                 hljs.initHighlightingOnLoad();
