@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>reveal.js - The HTML Presentation Framework</title>
+    <meta name="description" content="A framework for easily creating presentations">
+    <meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="../dist/presentation.bundle.css">
+
+    <link rel="icon" href="../business-presentation.png" />
+        <!--source : https://www.flaticon.com/free-icon/business-presentation_66134-->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+           document.querySelectorAll('a').forEach(a => a.setAttribute('target', '_blank'));
+        });
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide-->
+    <div class="slides">
+
+        <section>
+            <h1>Reveal.js</h1>
+        </section>
+
+        <section>Single Horizontal Slide</section>
+
+        <section>
+            <section>Vertical Slide 1</section>
+            <section>Vertical Slide 2</section>
+        </section>
+
+        <section>
+            <h1>THE END</h1>
+            <h2>BY Hakim El Hattab / hakim.se</h2>
+        </section>
+
+        <section>
+            <section>
+                Slide sandbox
+                <br>
+                <a href="https://github.com/hakimel/reveal.js#markdown">https://github.com/hakimel/reveal.js#markdown</a>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ## Hello I'm using markdown.
+
+                </script>
+            </section>
+
+            <section data-markdown>
+                <textarea data-template>
+                    ## Markdown syntax
+
+                    A paragraph with some text and a [link](http://hakim.se).
+
+                    [source](https://github.com/hakimel/reveal.js#markdown)
+                </textarea>
+            </section>
+        </section>
+    </div>
+</div>
+<script src="../dist/presentation.bundle.js"></script>
+</body>
+</html>
