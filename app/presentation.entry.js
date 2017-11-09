@@ -79,63 +79,63 @@ else {
 
     target.style.display = 'block';
 
+    const input = target.querySelector('input');
+
+    const textarea = target.querySelector('textarea');
+
+    target.querySelector('button[name="fromscript"]').addEventListener('click', e => {
+
+        e.preventDefault();
+
+        const val = trim(input.value);
+
+        if (val) {
+
+            loadPresentation(val);
+        }
+        else {
+
+            log('url is empty');
+        }
+    });
+
+    target.querySelector('button[name="fromtext"]').addEventListener('click', e => {
+
+        e.preventDefault();
+
+        const val = trim(textarea.value);
+
+        if (val) {
+
+            target.style.display = 'none';
+
+            load(val);
+        }
+        else {
+
+            log('textarea is empty');
+        }
+    });
+    
     getHtml('https://raw.githubusercontent.com/stopsopa/presentation/master/docs/tapes/list.html')
         .then(html => document.querySelector('#target .list').innerHTML = html)
-        .then(() => {
-            const input = target.querySelector('input');
-            target.addEventListener('click', e => {
+        .then(() => target.addEventListener('click', e => {
 
-                e.preventDefault();
+            e.preventDefault();
 
-                const target = e.target;
+            const target = e.target;
 
-                const tag = target.tagName.toLowerCase();
+            const tag = target.tagName.toLowerCase();
 
-                if (tag === 'a') {
+            if (tag === 'a') {
 
-                    input.value = target.getAttribute('href');
-                }
-                else {
+                input.value = target.getAttribute('href');
+            }
+            else {
 
-                    log('other tag was clicked: ', tag);
-                }
-            });
-
-            target.querySelector('button[name="fromscript"]').addEventListener('click', e => {
-
-                e.preventDefault();
-
-                const val = trim(input.value);
-
-                if (val) {
-
-                    loadPresentation(val);
-                }
-                else {
-
-                    log('url is empty');
-                }
-            });
-
-            const textarea = target.querySelector('textarea');
-            target.querySelector('button[name="fromtext"]').addEventListener('click', e => {
-
-                e.preventDefault();
-
-                const val = trim(textarea.value);
-
-                if (val) {
-
-                    target.style.display = 'none';
-
-                    load(val);
-                }
-                else {
-
-                    log('textarea is empty');
-                }
-            })
-        });
+                log('other tag was clicked: ', tag);
+            }
+        }))
     ;
 }
 
