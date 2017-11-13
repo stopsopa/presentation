@@ -10,7 +10,6 @@ import 'node-reveal/reveal.js/lib/js/head.min';
 
 import './pages/presentation.scss';
 
-
 function getHtml(url) {
 
     if (url.indexOf('#') > -1) {
@@ -18,7 +17,12 @@ function getHtml(url) {
         url = url.split('#')[0];
     }
 
-    const promise = fetch(`https://cors-anywhere.herokuapp.com/${url}`)
+    if ( ! location.href.indexOf('/localhost') ) {
+
+        url = `https://cors-anywhere.herokuapp.com/${url}`;
+    }
+
+    const promise = fetch(url)
         .then(res => res.text())
     ;
 
@@ -26,7 +30,6 @@ function getHtml(url) {
 
     return promise;
 }
-
 
 function trim(s) {
     return (s || '').replace(/^\s*(\S*(\s+\S+)*)\s*$/,'$1');
@@ -46,7 +49,13 @@ const target = document.querySelector('#target');
 const presentation = location.search.split('?presentation=')[1];
 
 const load = html => {
-    document.querySelector('.slides').innerHTML = html;
+
+    var slides = document.querySelector('.slides');
+
+    slides.innerHTML = html;
+
+    slides.querySelectorAll('a').forEach(a => a.setAttribute('target', '_blank'));
+
     Reveal.initialize({
         controls: true,
         progress: true,

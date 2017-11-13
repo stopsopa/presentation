@@ -3,7 +3,7 @@
 <!--<a href="https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f">https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f</a>-->
 <!--</section>-->
 <section>
-    React.js, SSR and other toys
+    React.js, SSR and toys
 </section>
 
 <section>
@@ -201,25 +201,114 @@
 
 <section>
     <section>
-        Slide sandbox
+        <h4>symfony/asset</h4>
         <br>
-        <a href="https://github.com/hakimel/reveal.js#markdown">https://github.com/hakimel/reveal.js#markdown</a>
+        <a href="https://symfony.com/blog/new-in-symfony-2-6-smarter-assets-install-command">https://symfony.com/blog/new-in-symfony-2-6-smarter-assets-install-command</a>
+        <br>
+        <pre>$ php app/console assets:install --symlink --relative</pre>
+    </section>
+    <section>
+        What it should do in react project?
+        <br>
+        <a href="https://github.com/stopsopa/roderic/blob/master/app/other/bootstrap/bootstrap.entry.js">bootstrap example</a>
+        <hr>
+        <a href="http://localhost:81/bootstrap.html">http://localhost:81/bootstrap.html</a>
+        <br>
+        <a href="https://github.com/stopsopa/roderic/blob/master/app/other/bootstrap/bootstrap.entry.js">js</a>
+        <br>
+        <a href="https://github.com/stopsopa/roderic/blob/master/docs/bootstrap.html">html</a>
+        <hr>
+        webpack part:
+        <br>
+        <ul>
+            <li>loading from node_modules</li>
+            <li>fixing paths to img (and others)</li>
+            <li>masking node_modules</li>
+        </ul>
     </section>
 
-    <section data-markdown>
-        <script type="text/template">
-            ## Hello I'm using markdown.
-
-        </script>
-    </section>
-
-    <section data-markdown>
-                <textarea data-template>
-                    ## Markdown syntax
-
-                    A paragraph with some text and a [link](http://hakim.se).
-
-                    [source](https://github.com/hakimel/reveal.js#markdown)
-                </textarea>
+    <section>
+        <h4>Loading libraries from anywhere</h4>
+        <br>
+        back to bootstrap example ...
+        <br>
+        <a href="https://github.com/stopsopa/roderic/blob/master/dir-to-link/index.css">css source</a>
     </section>
 </section>
+
+<section>
+    <section>
+        Let's talk about SSR...
+    </section>
+    <section>
+        <h4>Example</h4>
+        <a href="http://localhost:81/react.html">react form</a>
+        <br>
+        <em style="font-size: 20px;">...talk about events</em>
+        <br>
+        <em style="font-size: 20px;">...talk about google research</em>
+    </section>
+    <section>
+        <h4>Problems & requirements of SSR:</h4>
+        <ul>
+            <li style="font-size: 36px;">demands rendering on server</li>
+            <span style="color: gray; font-size: 29px;">so</span>
+            <li style="font-size: 36px;">use the same tools on backend and frontend</li>
+            <span style="color: gray; font-size: 29px;">so</span>
+            <li style="font-size: 36px;">calling api from browser and from server</li>
+            <span style="color: gray; font-size: 29px;">so</span>
+            <li style="font-size: 36px;">do it well in order to reduce AJAX requests (reduce server traffic)</li>
+            <span style="color: gray; font-size: 29px;">so</span>
+            <li style="font-size: 36px;">Requires changing architecture/tools</li>
+            <span style="color: gray; font-size: 29px;">conclusion</span>
+            <li style="font-size: 36px;">hard to do if it's not done from beginning</li>
+        </ul>
+    </section>
+    <section>
+        <h4>Benefits:</h4>
+        <ul>
+            <li>SEO for free (not quite)</li>
+            <li>You can see changes immediately</li>
+            <li>Faster loading page</li>
+            <li>Reduced requests (at least from browser) varnish</li>
+            <li>Satisfaction 🥂</li>
+        </ul>
+    </section>
+</section>
+<section>
+    <section>
+        Architecture:
+    </section>
+    <section>
+        <img src="https://i.imgur.com/tOoIDRC.png" alt="Schema">
+    </section>
+</section>
+
+
+
+
+
+<!--<section>-->
+    <!--<section>-->
+        <!--Slide sandbox-->
+        <!--<br>-->
+        <!--<a href="https://github.com/hakimel/reveal.js#markdown">https://github.com/hakimel/reveal.js#markdown</a>-->
+    <!--</section>-->
+
+    <!--<section data-markdown>-->
+        <!--<script type="text/template">-->
+            <!--## Hello I'm using markdown.-->
+
+        <!--</script>-->
+    <!--</section>-->
+
+    <!--<section data-markdown>-->
+        <!--<textarea data-template>-->
+            <!--## Markdown syntax-->
+
+            <!--A paragraph with some text and a [link](http://hakim.se).-->
+
+            <!--[source](https://github.com/hakimel/reveal.js#markdown)-->
+        <!--</textarea>-->
+    <!--</section>-->
+<!--</section>-->
